@@ -1,4 +1,11 @@
 class ProvidersController < ApplicationController
+  before_action :set_provider, only: %i[show edit update]
+
+  def index
+    @providers = Provider.includes(:bank).all
+  end
+
+  def show; end
   def new
     @provider = Provider.new
   end
@@ -13,6 +20,17 @@ class ProvidersController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @provider.update(provider_params)
+      redirect_to providers_path
+    else
+      render :edit, locals: { model: @provider }, status: :unprocessable_entity
+    end
+  end
+
+
   private
 
   def provider_params
@@ -22,5 +40,9 @@ class ProvidersController < ApplicationController
                                      :contact_phone,
                                      :account_number,
                                      :bank_id)
+  end
+
+  def set_provider
+    @provider = Provider.find(params[:id])
   end
 end
