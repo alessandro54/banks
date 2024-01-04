@@ -64,3 +64,8 @@ es:
       nav:
         new_provider: Nuevo Proveedor
         providers: Proveedores
+    dashboard:
+      providers:
+        title: "Cantidad de Proveedores"
+      banks:
+        title: "Cantidad de bancos"
