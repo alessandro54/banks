@@ -19,8 +19,8 @@ RSpec.describe ProvidersController, type: :controller do
           name: 'Provider Name',
           nit: '123456789-3',
           contact_name: 'Alessandro Chumpitaz',
-          contact_phone: '123456789',
-          account_number: '4555455545555643',
+          contact_phone: '987654321',
+          account_number: '123456789',
           bank_id: bank.id
         }
       end
@@ -48,6 +48,8 @@ RSpec.describe ProvidersController, type: :controller do
         expect do
           post :create, params: { provider: invalid_attributes }
         end.to change(Provider, :count).by(0)
+
+        expect(response).to render_template('new')
       end
     end
   end
