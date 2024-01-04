@@ -2,7 +2,7 @@ class ProvidersController < ApplicationController
   before_action :set_provider, only: %i[show edit update]
 
   def index
-    @providers = Provider.includes(:bank).all
+    @pagy, @providers = pagy(Provider.all)
   end
 
   def show; end
@@ -14,7 +14,7 @@ class ProvidersController < ApplicationController
     @provider = Provider.new(provider_params)
 
     if @provider.save
-      redirect_to provider_url(@provider), notice: 'Provider was successfully created.'
+      redirect_to providers_path, notice: 'Provider was successfully created.'
     else
       render :new, locals: { model: @provider }, status: :unprocessable_entity
     end
