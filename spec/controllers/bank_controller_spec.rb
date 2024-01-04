@@ -27,7 +27,7 @@ RSpec.describe BanksController, type: :controller do
       it 'renders the 404 page' do
         get :show, params: { id: 0 }
 
-        expect(response).to render_template('errors/404')
+        expect(response).to have_http_status(:not_found)
       end
     end
   end
@@ -44,7 +44,8 @@ RSpec.describe BanksController, type: :controller do
     it 'creates a new bank' do
       post :create, params: { bank: { name: 'Test Bank' } }
 
-      expect(response).to have_http_status(:created)
+      expect(response).to redirect_to(banks_path)
+      expect(flash[:notice]).to eq(I18n.t('controllers.banks.create.success'))
     end
   end
 
@@ -64,7 +65,8 @@ RSpec.describe BanksController, type: :controller do
     it 'updates a bank' do
       put :update, params: { id: bank.id, bank: { name: 'Updated Bank' } }
 
-      expect(response).to have_http_status(:ok)
+      expect(response).to redirect_to(bank_path(bank))
+      expect(flash[:notice]).to eq(I18n.t('controllers.banks.update.success'))
     end
   end
 
@@ -74,7 +76,8 @@ RSpec.describe BanksController, type: :controller do
     it 'deletes a bank' do
       delete :destroy, params: { id: bank.id }
 
-      expect(response).to have_http_status(:no_content)
+      expect(response).to redirect_to(banks_path)
+      expect(flash[:notice]).to eq(I18n.t('controllers.banks.destroy.success'))
     end
   end
 end
