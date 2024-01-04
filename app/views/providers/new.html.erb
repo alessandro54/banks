@@ -2,5 +2,7 @@
   <% if @provider.errors.any? %>
     <%= render 'components/providers/new/errors' %>
   <% end %>
-  <%= render 'components/providers/new/form' %>
+  <div class="py-40 w-full grid place-items-center">
+    <%= render 'components/providers/new/form' %>
+  </div>
 </section>

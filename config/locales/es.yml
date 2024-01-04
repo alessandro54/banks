@@ -37,6 +37,13 @@ es:
         nit: NIT
   views:
     providers:
+      index:
+        table:
+          placeholder: Sin información en la tabla
+        actions:
+          new_provider: "Nuevo proveedor"
+        title: "Proveedores"
+        subtitle: "Lista de proveedores que incluye informacion del contacto y el banco"
       new:
         errors:
           title:
@@ -47,7 +54,13 @@ es:
           subtitle: Por favor llene el formulario a continuación para crear un nuevo
             proveedor.
           title: Nuevo Proveedor
+      edit:
+        form:
+          title: "Editar proveedor"
+          submit: "Editar"
     shared:
       nav:
         new_provider: Nuevo Proveedor
         providers: Proveedores
+      actions:
+        back: "Volver"

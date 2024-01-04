@@ -46,7 +46,18 @@ en:
           submit: Create Provider
           subtitle: Please fill in the form below to create a new provider.
           title: New Provider
+      index:
+        actions:
+          new_provider: "New provider"
+        title: "Providers"
+        subtitle: "A list of all the users in your account including their name, contact information and bank"
+      edit:
+        form:
+          title: "Edit provider"
+          submit: "Edit"
     shared:
       nav:
         new_provider: New Provider
         providers: Providers
+      actions:
+        back: "Back"
