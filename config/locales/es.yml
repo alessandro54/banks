@@ -1,0 +1,10 @@
+---
+es:
+  controllers:
+    banks:
+      create:
+        success: Creado satisfactoriamente
+      destroy:
+        success: Banco fue eliminado con éxito.
+      update:
+        success: Banco fue actualizado con éxito.
