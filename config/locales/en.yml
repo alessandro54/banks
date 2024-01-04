@@ -37,6 +37,18 @@ en:
         nit: NIT
   views:
     providers:
+      edit:
+        form:
+          submit: Edit
+          title: Edit provider
+      index:
+        actions:
+          new_provider: New provider
+        subtitle: A list of all the users in your account including their name, contact
+          information and bank
+        table:
+          placeholder: No information
+        title: Providers
       new:
         errors:
           title:
@@ -47,6 +59,8 @@ en:
           subtitle: Please fill in the form below to create a new provider.
           title: New Provider
     shared:
+      actions:
+        back: Back
       nav:
         new_provider: New Provider
         providers: Providers

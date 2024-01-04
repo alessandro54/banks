@@ -37,6 +37,17 @@ es:
         nit: NIT
   views:
     providers:
+      edit:
+        form:
+          submit: Editar
+          title: Editar proveedor
+      index:
+        actions:
+          new_provider: Nuevo proveedor
+        subtitle: Lista de proveedores que incluye informacion del contacto y el banco
+        table:
+          placeholder: Sin información en la tabla
+        title: Proveedores
       new:
         errors:
           title:
@@ -48,6 +59,8 @@ es:
             proveedor.
           title: Nuevo Proveedor
     shared:
+      actions:
+        back: Volver
       nav:
         new_provider: Nuevo Proveedor
         providers: Proveedores

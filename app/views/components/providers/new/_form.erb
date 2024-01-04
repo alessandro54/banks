@@ -1,8 +1,12 @@
-<%= form_with model: @provider, class: 'py-40 w-full lg:w-1/2' do |f| %>
+<%= form_for @provider, { html: { class: 'w-full lg:w-1/2' }} do |f| %>
   <div class="space-y-12">
     <div class="border-b border-gray-900/10 pb-12">
       <h2 class="text-base font-semibold leading-7 text-gray-900">
-        <%= I18n.t('views.providers.new.form.title') %>
+        <% if @provider.persisted? %>
+          <%= I18n.t('views.providers.edit.form.title') %>
+        <% else %>
+          <%= I18n.t('views.providers.new.form.title') %>
+        <% end %>
       </h2>
       <p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
 
@@ -54,6 +58,6 @@
 
   <div class="mt-6 flex items-center justify-end gap-x-6">
     <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
-    <%= f.submit I18n.t('views.providers.new.form.submit'), class: 'rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' %>
+    <%= f.submit @provider.persisted? ? I18n.t('views.providers.edit.form.submit') : I18n.t('views.providers.new.form.submit'), class: 'rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' %>
   </div>
 <% end %>
