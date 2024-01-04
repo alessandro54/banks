@@ -1,5 +1,23 @@
 ---
 en:
+  activerecord:
+    errors:
+      models:
+        provider:
+          attributes:
+            account_number:
+              blank: Provider must have an account number.
+            bank:
+              required: You must select a bank.
+            contact_name:
+              blank: Provider must have a contact name.
+            contact_phone:
+              blank: Provider must have a contact phone.
+            name:
+              blank: Provider must have a name.
+            nit:
+              blank: NIT field cannot be blank.
+              invalid: NIT field is not valid.
   controllers:
     banks:
       create:
@@ -8,3 +26,27 @@ en:
         success: Bank was successfully deleted.
       update:
         success: Bank was successfully updated.
+  helpers:
+    label:
+      provider:
+        account_number: Account Number
+        bank_id: Bank
+        contact_name: Contact Name
+        contact_phone: Contact Phone
+        name: Name
+        nit: NIT
+  views:
+    providers:
+      new:
+        errors:
+          title:
+            one: There was an error with your submission
+            other: There were %{count} errors with your submission
+        form:
+          submit: Create Provider
+          subtitle: Please fill in the form below to create a new provider.
+          title: New Provider
+    shared:
+      nav:
+        new_provider: New Provider
+        providers: Providers
