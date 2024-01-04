@@ -1,5 +1,23 @@
 ---
 es:
+  activerecord:
+    errors:
+      models:
+        provider:
+          attributes:
+            account_number:
+              blank: El proveedor debe tener un número de cuenta.
+            bank:
+              required: Debe seleccionar un banco.
+            contact_name:
+              blank: El proveedor debe tener un nombre de contacto.
+            contact_phone:
+              blank: El proveedor debe tener un teléfono de contacto.
+            name:
+              blank: El proveedor debe tener un nombre.
+            nit:
+              blank: El campo de NIT no puede estar en blanco.
+              invalid: El campo de NIT no es válido.
   controllers:
     banks:
       create:
@@ -8,3 +26,28 @@ es:
         success: Banco fue eliminado con éxito.
       update:
         success: Banco fue actualizado con éxito.
+  helpers:
+    label:
+      provider:
+        account_number: Número de Cuenta
+        bank_id: Banco
+        contact_name: Nombre del Contacto
+        contact_phone: Teléfono del Contacto
+        name: Nombre
+        nit: NIT
+  views:
+    providers:
+      new:
+        errors:
+          title:
+            one: 'Hubo 1 error impidió que el proveedor fuera guardado:'
+            other: 'Hubo %{count} errores impidieron que el proveedor fuera guardado:'
+        form:
+          submit: Crear Proveedor
+          subtitle: Por favor llene el formulario a continuación para crear un nuevo
+            proveedor.
+          title: Nuevo Proveedor
+    shared:
+      nav:
+        new_provider: Nuevo Proveedor
+        providers: Proveedores

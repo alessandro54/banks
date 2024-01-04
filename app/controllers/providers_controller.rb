@@ -1,13 +1,15 @@
 class ProvidersController < ApplicationController
-  def new; end
+  def new
+    @provider = Provider.new
+  end
 
   def create
     @provider = Provider.new(provider_params)
 
     if @provider.save
-      redirect_to @provider
+      redirect_to provider_url(@provider), notice: 'Provider was successfully created.'
     else
-      render 'new'
+      render :new, locals: { model: @provider }, status: :unprocessable_entity
     end
   end
 
