@@ -64,3 +64,8 @@ en:
       nav:
         new_provider: New Provider
         providers: Providers
+    dashboard:
+      providers:
+        title: "Total Providers"
+      banks:
+        title: "Banks"
