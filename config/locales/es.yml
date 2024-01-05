@@ -36,6 +36,11 @@ es:
         name: Nombre
         nit: NIT
   views:
+    dashboard:
+      banks:
+        title: Cantidad de bancos
+      providers:
+        title: Cantidad de Proveedores
     providers:
       edit:
         form:
@@ -61,16 +66,11 @@ es:
     shared:
       actions:
         back: Volver
-        logout: "Cerrar sesión"
+        logout: Cerrar sesión
       nav:
         new_provider: Nuevo Proveedor
         providers: Proveedores
-    dashboard:
-      providers:
-        title: "Cantidad de Proveedores"
-      banks:
-        title: "Cantidad de bancos"
     users:
       sessions:
         new:
-          title: "Iniciar sesión"
+          title: Iniciar sesión
