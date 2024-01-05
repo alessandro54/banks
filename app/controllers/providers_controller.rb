@@ -1,4 +1,4 @@
-class ProvidersController < ApplicationController
+class ProvidersController < BaseController
   before_action :set_provider, only: %i[show edit update]
 
   def index

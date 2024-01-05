@@ -36,6 +36,11 @@ en:
         name: Name
         nit: NIT
   views:
+    dashboard:
+      banks:
+        title: Banks
+      providers:
+        title: Total Providers
     providers:
       edit:
         form:
@@ -61,11 +66,11 @@ en:
     shared:
       actions:
         back: Back
+        logout: Log out
       nav:
         new_provider: New Provider
         providers: Providers
-    dashboard:
-      providers:
-        title: "Total Providers"
-      banks:
-        title: "Banks"
+    users:
+      sessions:
+        new:
+          title: Log in
