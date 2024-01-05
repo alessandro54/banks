@@ -1,0 +1,33 @@
+<table class="min-w-full divide-y divide-gray-300">
+  <thead>
+  <tr>
+    <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
+      <%= I18n.t("helpers.label.provider.name") %>
+    </th>
+    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+      <%= I18n.t("helpers.label.provider.nit") %>
+    </th>
+    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+      <%= I18n.t("helpers.label.provider.contact_name") %>
+    </th>
+    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+      <%= I18n.t("helpers.label.provider.contact_phone") %>
+    </th>
+    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+      <%= I18n.t("helpers.label.provider.bank_id") %>
+    </th>
+    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+      <%= I18n.t("helpers.label.provider.account_number") %>
+    </th>
+    <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-0">
+      <span class="sr-only">Edit</span>
+    </th>
+  </tr>
+  </thead>
+  <tbody class="divide-y divide-gray-200">
+  <!-- More people... -->
+  <% @providers.each do |provider| %>
+    <%= render 'components/providers/index/provider_row', provider: %>
+  <% end %>
+  </tbody>
+</table>

@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Banks Account management challenge, where i can manage all my customer accounts.
 
-Things you may want to cover:
+## Tools
+* Ruby 3.2.2
+* Postgres 13.11
 
-* Ruby version
+## Docker Setup
 
-* System dependencies
+```bash
+docker compose up
+```
 
-* Configuration
+## Local installation
+* Clone the repo
+* Install ruby dependencies
 
-* Database creation
+```bash
+bundle install
+```
 
-* Database initialization
+* Create the database and run the migrations
+```bash
+rails db:setup
+```
 
-* How to run the test suite
+* Run the server on [localhost:3000](http://localhost:3000)
+```bash
+./bin/dev
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Run the tests
+```bash
+./bin/rake
+```

@@ -11,6 +11,8 @@ gem "sprockets-rails"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
+gem 'pagy'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
@@ -51,6 +53,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails', '~> 6.0.0'
+  gem 'i18n-tasks', '~> 1.0.13'
 end
 
 group :development do
@@ -72,3 +75,5 @@ group :test do
   gem 'rails-controller-testing'
   gem 'shoulda-matchers', '~> 5.0'
 end
+
+gem "tailwindcss-rails", "~> 2.1"

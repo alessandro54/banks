@@ -1,0 +1,8 @@
+<section class="relative w-full grid place-items-center">
+  <% if @provider.errors.any? %>
+    <%= render 'components/providers/new/errors' %>
+  <% end %>
+  <div class="py-40 w-full grid place-items-center">
+    <%= render 'components/providers/new/form' %>
+  </div>
+</section>

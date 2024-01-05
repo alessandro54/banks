@@ -1,31 +1,76 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
+---
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        provider:
+          attributes:
+            account_number:
+              blank: Provider must have an account number.
+            bank:
+              required: You must select a bank.
+            contact_name:
+              blank: Provider must have a contact name.
+            contact_phone:
+              blank: Provider must have a contact phone.
+            name:
+              blank: Provider must have a name.
+            nit:
+              blank: NIT field cannot be blank.
+              invalid: NIT field is not valid.
+  controllers:
+    banks:
+      create:
+        success: Successfully created
+      destroy:
+        success: Bank was successfully deleted.
+      update:
+        success: Bank was successfully updated.
+  helpers:
+    label:
+      provider:
+        account_number: Account Number
+        bank_id: Bank
+        contact_name: Contact Name
+        contact_phone: Contact Phone
+        name: Name
+        nit: NIT
+  views:
+    dashboard:
+      banks:
+        title: Banks
+      providers:
+        title: Total Providers
+    providers:
+      edit:
+        form:
+          submit: Edit
+          title: Edit provider
+      index:
+        actions:
+          new_provider: New provider
+        subtitle: A list of all the users in your account including their name, contact
+          information and bank
+        table:
+          placeholder: No information
+        title: Providers
+      new:
+        errors:
+          title:
+            one: There was an error with your submission
+            other: There were %{count} errors with your submission
+        form:
+          submit: Create Provider
+          subtitle: Please fill in the form below to create a new provider.
+          title: New Provider
+    shared:
+      actions:
+        back: Back
+        logout: Log out
+      nav:
+        new_provider: New Provider
+        providers: Providers
+    users:
+      sessions:
+        new:
+          title: Log in
