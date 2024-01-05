@@ -61,6 +61,7 @@ es:
     shared:
       actions:
         back: Volver
+        logout: "Cerrar sesión"
       nav:
         new_provider: Nuevo Proveedor
         providers: Proveedores
@@ -69,3 +70,7 @@ es:
         title: "Cantidad de Proveedores"
       banks:
         title: "Cantidad de bancos"
+    users:
+      sessions:
+        new:
+          title: "Iniciar sesión"

@@ -61,6 +61,7 @@ en:
     shared:
       actions:
         back: Back
+        logout: "Log out"
       nav:
         new_provider: New Provider
         providers: Providers

@@ -1,4 +1,4 @@
-class BanksController < ApplicationController
+class BanksController < BaseController
   before_action :set_bank, only: [:show, :update, :destroy]
   def index
     @banks = Bank.all
